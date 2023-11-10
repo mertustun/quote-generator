@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #DF2E38;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    width: 400px;
+}
+
+.container {
+    width: 100%;
+    background-color: #DF2E38;
+    padding: 50px 40px;
+    box-shadow: 0 20px 65px rgba(87, 11, 16, 0.5);
+    border-radius: 15px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 80%;
+    height: 120%;
+    background-color: #ffffff;
+    border-radius: 30px 15px;
+    z-index: -10;
+    top: -10%;
+}
+
+.container p {
+    color: #fdd8d8;
+    line-height: 2;
+    font-size: 18px;
+    opacity: 0;
+}
+
+.container span {
+    color: #ffffff;
+    margin: 20px 0 60px 0;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-transform: capitalize;
+    opacity: 0;
+}
+
+.container button {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 15px 45px;
+    border-radius: 15px 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #DF2E38;
+    cursor: pointer;
+}
+.container button:active{
+    transform: scale(.97);
+}
+.fade :is(p, span){
+    opacity: 1;
+    transition: opacity 1.5s linear;
+}
